@@ -9,6 +9,7 @@ For each project, please download latest version of maven to run mvn commands fr
 
 Following setup will need to be done on local machine to run these projects:
 * Install Zookeeper - [Visit zookeeper](http://zookeeper.apache.org/doc/trunk/zookeeperStarted.html) (For mac users, it's also available via brew)
+* Install Python - [Visit Python](https://www.python.org/downloads/). Python is required to run the storm daemon processes.
 * Install Kafka - [Visit kafka](http://kafka.apache.org/documentation.html#quickstart) (For mac users, it's also available via brew)
 * Install Storm - [Visit storm setup](http://ptgoetz.github.io/blog/2013/12/18/running-apache-storm-on-windows) (For mac users, it's also available via brew)
 * Install MongoDB - [Visit mongodb](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/) (For mac users, it's also available via brew)
