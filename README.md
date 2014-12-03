@@ -14,19 +14,19 @@ Following setup will need to be done on local machine to run these projects:
 * Install MongoDB - [Visit mongodb](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/) (For mac users, it's also available via brew)
 * Zookeeper config - In zookeeper's conf/zoo.cfg, change the *dataDir* to a directory of your choice. Rest can be left as is (leave *clientPort* to be 2181).
 * Kafka config - In kafka's config/server.properties, keep *broker_id=0*, *port=9092*, *log.dirs=directory of your choice*, *num.partitions=1* and *zookeeper.connect=localhost:2181*. Rest can be left as is.
-* Storm config - In storm's conf/storm.yaml, following configuration is required (port numbers can be of choice, though should be open for use)
+* Storm config - In storm's conf/storm.yaml, following configuration is required (port numbers can be of choice, though should be open for use - You may also refer https://github.com/apache/storm/blob/master/conf/defaults.yaml)
 
-   storm.zookeeper.servers:
-      - "127.0.0.1"
-   storm.zookeeper.port: 2181
-   nimbus.host: "127.0.0.1"
-   storm.local.dir: "directory of your choice"
-   storm.messaging.transport: backtype.storm.messaging.netty.Context
-   supervisor.slots.ports:
-      - 7400
-      - 7401
-      - 7402
-      - 7403
+   - storm.zookeeper.servers:
+      "127.0.0.1"
+   - storm.zookeeper.port: 2181
+   - nimbus.host: "127.0.0.1"
+   - storm.local.dir: "directory of your choice"
+   - storm.messaging.transport: backtype.storm.messaging.netty.Context
+   - supervisor.slots.ports:
+      7400
+      7401
+      7402
+      7403
 
 * Storm lib add-ons - Following jars need to be in storm's classpath to run this topology (these can be copied from your maven repository to storm's lib directory - provided you've already done the **mvn clean install** for the topology and event producer programs):
 
